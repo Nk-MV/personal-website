@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>My Personal Website</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Personal introduction and photo  -->
+        <header>
+            <img src="./img/profile_photo.jpg" alt="Professional Photo" class="profile-photo">
+            <h1>Doan Huynh Nguyen Khang</h1>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#notebook">Notebook</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Me Section: Background, education, and skills -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="margin-bottom: 20px;">
+                Hello! I'm a passionate software developer currently studying at Fulbright University Vietnam. 
+                I love creating innovative solutions and learning new technologies. My goal is to build 
+                applications that make a positive impact on people's lives.
+            </p>
+
+            <div class="about-content">
+                <div class="about-item">
+                    <h3>🎓 Education</h3>
+                    <p><strong>Fulbright University Vietnam</strong></p>
+                    <p>Expected Graduation: 2029</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>💼 Experience</h3>
+                    <p>Worked on go game projects using modern technologies.</p>
+                    <p>Worked on web development projects using modern technologies.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>🎨 Hobbies</h3>
+                    <ul style="list-style-position: inside;">
+                        <li>Coding and building projects</li>
+                        <li>Reading tech blogs</li>
+                        <li>Playing video games</li>
+                    </ul>
+                </div>
+
+                <div class="about-item">
+                    <h3>⚡ Skills</h3>
+                    <ul class="skills-list">
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section: Showcase of projects -->
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <p style="margin-bottom: 20px;">
+                Here are some projects I've worked on. Each project showcases different skills and technologies.
+            </p>
+
+            <div class="projects">
+                <div class="project-card">
+                    <h3>🎮 Go Game Application</h3>
+                    <p>A fully-featured Go game with AI opponents using Minimax algorithm and Alpha-Beta pruning. 
+                       Includes Ko rule, suicide prevention, and save/load functionality.</p>
+                    <p><strong>Technologies:</strong> C++, SFML</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>🌐 Personal Website</h3>
+                    <p>A responsive personal website with interactive notebook feature. Built from scratch 
+                       using only HTML and JavaScript with DOM manipulation.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section: Form and contact information -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p style="text-align: center; margin-bottom: 20px;">
+                Feel free to reach out! I'm always open to discussing new projects or opportunities.
+            </p>
+
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button class="button" onclick="handleContactSubmit()">Send Message</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p><strong>Email:</strong> khang.doan.250002@fulbright.edu.vn</p>
+                <p><strong>Phone:</strong> +84 899 201 790</p>
+                <p><strong>Location:</strong> Ho Chi Minh City, Vietnam</p>
+            </div>
+        </section>
+
+        <!-- Notebook Section (Part 2) -->
+        <section id="notebook">
+            <h2>📓 Note</h2>
+            <p style="margin-bottom: 20px;">
+                Use this notebook to jot down your thoughts, ideas, or reminders. 
+                Notes will remain until you refresh the page.
+            </p>
+
+            <div class="notebook-container">
+                <textarea 
+                    id="noteInput" 
+                    placeholder="Type your note here..."
+                    aria-label="Note input area"
+                ></textarea>
+
+                <button class="button" onclick="addNote()">📝 Add Note</button>
+
+                <!-- Notification for empty input -->
+                <div id="notification" class="notification">
+                    ⚠️ Please type something before adding a note!
+                </div>
+
+                <!-- Notes will be displayed here -->
+                <div class="notes-display" id="notesDisplay">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Your Notes:</h3>
+                    <p id="emptyMessage" style="color: #999; text-align: center; padding: 20px;">
+                        No notes yet. Start adding some!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 khang. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Notebook Functionality -->
+    <script src="./script.js"></script>
+</body>
+</html>
